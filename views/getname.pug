@@ -1,0 +1,23 @@
+extends base
+
+block content
+    .get-started
+        .get-started-content
+            .get-started-content-wrapper
+                ul.header-nav__list
+                    svg.icon-book.icon-book-color
+                        use(href='/img/sprite1.svg#icon-arrow_left')
+                    li.header-nav__list-item
+                        a.nav__link(href='/get-started/email') back
+                p.heading-2 What is your name?
+                form.form.form--login
+                    .form__group
+                        input#email.form__input(type='FirtsName', placeholder='First name', required)
+                    .form__group
+                        input#email.form__input(type='LastName', placeholder='Last name', required)
+                    
+
+                     
+
+                a(href='/get-started/email')
+                    button.btn-more(style='border-color: #fff;') Next

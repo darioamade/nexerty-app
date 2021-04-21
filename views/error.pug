@@ -1,0 +1,16 @@
+extends base
+
+block content
+    .error-page
+        .illust-error
+            img.undraw-size(src='/img/404-green.svg' alt='undraw img')
+        .error-page-text
+            p.heading-11= msg
+                //- THE PAGE YOU ARE LOOKING FOR DOES NOT EXIST
+            p.text-plain
+                | We couldn&apos;t find what you were looking for. You may have clicked on an out-of-date link, or
+                | perhaps you accidentally mistyped a URL. 
+            a(href='/')
+                button.btn-error
+                    | Go home
+

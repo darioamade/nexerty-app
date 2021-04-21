@@ -1,0 +1,108 @@
+extends base
+
+block content 
+    section.section-2
+        .home-intro
+            .home-intro-title
+                p.heading-sub SELLING WITH NEXERETY
+                h1.heading-1 Take control of your home sale
+                p.text-plain.
+
+                    The perfect marriage of experienced estate agents and smart technology keep you informed every step of the way.
+            .home-intro-video
+    section.buying
+        .buying-content(style='background-color: #fff;')
+            .buying-content-top(style='background-color: #081826;')
+                .buying-content-top-left
+                    img.img-house.clipped(src='/img/img/47.jpg' alt='img svg')
+                .buying-content-top-right
+                    p.heading-sub(style='color: #fff;') #1 AGENCY IN LONDON
+                    p.heading-1(style='color: #fff;') Expert support from local agents
+                    p.text-plain(style='color: #fff;')
+
+                        Nexerty are proud to boast the best estate agents in London, who will work tirelessly to achieve the best possible price for your home.
+
+                    a(href)
+                        button.btn-more(style='border-color: #fff;') Meet our local agents
+            .buying-content-top
+                .buying-content-top-left(style='order: 1')
+                    img.img-house(src='/img/img/50.jpg' alt='img svg')
+                .buying-content-top-right(style='order: 0')
+                    p.heading-sub VIEWING AND OFFER MANAGEMENT
+                    p.heading-1 A first class selling experience
+                    p.text-plain.
+
+                        We source suitable buyers from all over London using online portals like Rightmove and Zoopla, along with our vast buyer book. We then take care of viewings and offer negotiation, achieving an extra £20,000 from the first offer on average.
+
+                    //- a(href)
+                    //-     button.btn-more More about our agents
+            .buying-content-top
+                .buying-content-top-left(style='order: 0')
+                    .svgPhone
+                        img.img-house1(src='/img/cell.svg' alt='img svg')
+                    img.img-house(src='/img/img/51.jpg' alt='img svg')
+                .buying-content-top-right(style='order: 1')
+                    p.heading-sub SMART SALE
+                    p.heading-1 Digital insights at your fingertips
+                    p.text-plain.
+
+                        From viewing feedback and interested buyer updates, your online dashboard keeps you informed every step of the way. Our smart technology predicts how likely you are to sell and makes smart recommendations to get you sold for the best price at the right time.
+
+
+
+                    a(href)
+                        button.btn-more.
+
+                            More about smart sale
+
+            .find-out
+                .find-out-left
+                    p.heading-sub THE DOUBLE AGENT
+                    p.text-plain.
+
+                        Find out how Nexerty support you with your purchase too. For no extra fee.
+                .find-out-btn
+                    a(href='how-it-works')
+                        button.btn-more Support with your purchase 
+
+    //- section.sales-branch
+    //-     .sales-branch-container
+    //-         .sales-branch-container-title
+    //-             p.heading-sub FOR SALE
+    //-             p.heading-2 Local branches across London
+    //-         .sales-branch-container-images
+    //-             .slider.slider-block-invert
+    //-                 each house in men
+    //-                     .slide
+    //-                         .slide-img
+    //-                             a(href=`/`)
+    //-                                 img.house-images(src=`/img/houses/${house.imageCover}` )
+    //-                         .slide-descrisption
+    //-                             p.heading-3=`${house.category}`
+    //-                             .slide-descrisption-svg
+    //-                                 .slide-descrisption-svg-1
+    //-                                     svg.house-icon
+    //-                                         use(href='/img/img/sprite1.svg#icon-bed')
+    //-                                     p=`${house.bedrooms}`
+    //-                                 .slide-descrisption-svg-2
+    //-                                     svg.house-icon
+    //-                                         use(href='/img/img/sprite1.svg#icon-label')
+    //-                                     p=`£${house.price}`
+    //-             .slider-controler.desactive
+    //-                 .controler-wrapper
+    //-                     button.slider__btn.slider__btn--left ←
+    //-                     button.view-all View all the houses for sale
+    //-                     button.slider__btn.slider__btn--right →
+    section.get-touch-container
+        .get-touch
+            p.heading-1 
+                | Double the agent.
+                br
+                | No extra fee.
+            p.text-plain
+                Your Your local expert will arrange your free, no-obligation valuation.
+        form.Bookend___StyledForm-mzh7pm-5.kgWqFc
+        .AddressPicker___StyledDiv-sc-25res2-3.fWKpgE(role='combobox' aria-expanded='true' aria-haspopup='listbox' aria-labelledby='downshift-581-label' aria-owns='downshift-0-menu')
+            input#downshift-581-input.TextInput___StyledInput-sc-12n7u1z-1.euvAas(type='text' data-test='bookend-address' name='bookend-address' placeholder='Enter postcode' aria-autocomplete='list' aria-labelledby='downshift-581-label' autocomplete='off' aria-controls='downshift-0-menu')
+            .AddressPicker___StyledDiv2-sc-25res2-6.cdEHHT
+            button.Button__ButtonWrapper-zghgcj-0.Button___StyledButtonWrapper-zghgcj-2.kDNxOg.AddressPicker___StyledButton-sc-25res2-7.giNAuH(data-test='address-picker-submit-button' disabled) Get started

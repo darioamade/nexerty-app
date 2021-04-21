@@ -1,0 +1,67 @@
+.nav-menu
+    .nav-menu-container
+        svg.nav-menu-container-icon
+            use(href='/img/sprite.svg#icon-close')
+        .nav-menu-container-wrapper
+            svg.nav-menu-container-wrapper-icon
+                use(href='/img/sprite.svg#icon-cog')
+            li.nav-menu-container-wrapper-link
+                a.nav-menu-container-wrapper-links(href='/how-it-works') How it works
+        .nav-menu-container-wrapper
+            svg.nav-menu-container-wrapper-icon
+                use(href='/img/sprite.svg#icon-pie-chart')
+            li.nav-menu-container-wrapper-link
+                a.nav-menu-container-wrapper-links(href='/selling') Selling
+        .nav-menu-container-wrapper
+            svg.nav-menu-container-wrapper-icon
+                use(href='/img/sprite.svg#icon-king_bed')
+            li.nav-menu-container-wrapper-link
+                a.nav-menu-container-wrapper-links(href='/buying') Buying
+        .nav-menu-container-wrapper
+            svg.nav-menu-container-wrapper-icon
+                use(href='/img/sprite.svg#icon-sale1')
+            li.nav-menu-container-wrapper-link
+                a.nav-menu-container-wrapper-links(href='/for-sale') For sale
+            if user
+                .nav-menu-container-btn
+                    a(href='/me')
+                        button.btn-login-menu1 My Account
+                    a(href='/logout')
+                        button.btn-login-menu.nav-menu-logout Logout
+            else
+                .nav-menu-container-btn
+                    a(href='/login')
+                        button.btn-login-menu1 Login
+                    a(href='/signup')
+                        button.btn-login-menu Sign up
+header
+    .header
+        a.site-logo(href='/' aria-label='homepage')
+            img.logo(src='/img/unsorted/logox3.png')
+        ul.header-nav__list
+            li.header-nav__list-item
+                a.nav__link(href='/how-it-works') HOW IT WORKS
+            li.header-nav__list-item
+                a.nav__link(href='/selling') SELLING
+            li.header-nav__list-item
+                a.nav__link(href='/buying') BUYING
+            li.header-nav__list-item
+                a.nav__link(href='/for-sale') FOR SALE
+        ul.header-nav-login-user
+            if user
+                li.nav-list-item
+                    a#logoutBtn.nav__link.nav__link--btn Log out
+                li.nav-list-item
+                    a.user-photo(href='/me')
+                        img.user-img(src=`/img/users/${user.photo}` alt=`Photo of ${user.name} `)
+                span= user.name.split(' ')[0]
+            else
+                li.nav-list-item
+                    a.nav__link.nav__link--btn(href='/login') Login
+                li.nav-list-item
+                    a.nav__link.nav__link--btn.nav__link--btn--highlight(href='signup') Sign Up
+        .header-nav-menu
+            svg.house-icon-nav-menu
+                use(href='/img/unsorted/sprite.svg#icon-menu')
+
+

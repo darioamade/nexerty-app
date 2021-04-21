@@ -1,0 +1,81 @@
+extends base
+
+block append head
+    script(src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js')
+    link(href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet')
+
+block content 
+    section.house-view
+        .house-view-content
+            .house-view-content-descrisption
+                p.text-home=`${men.name}`
+                hr.hr
+                .price-badge
+                    p.text-price=`£${men.price.toLocaleString('en-gb')}`
+                    span UNDER OFFER
+                .slide-descrisption-svg
+                    .slide-descrisption-svg-1
+                        svg.house-icon
+                            use(href='/img/sprite1.svg#icon-home')
+                        p.text-plain1=`${men.category}`
+                    .slide-descrisption-svg-2
+                        svg.house-icon
+                            use(href='/img/sprite1.svg#icon-bed')
+                        p.text-plain1=`${men.bedrooms}`
+            .house-view-content-images-slider
+                .house-view-content-images-slider-container
+                    .slider
+                        each img, i in men.images
+                            .slide
+                                img(src=`/img/houses/${img}` alt=`${i + 1}`)
+                        button.slider__btn-overview.slider__btn--left-overview
+                            svg.house-icon-arrow
+                                use(href='/img/sprite1.svg#icon-keyboard_arrow_left')
+                        button.slider__btn-overview.slider__btn--right-overview
+                            svg.house-icon-arrow
+                                use(href='/img/sprite1.svg#icon-keyboard_arrow_right')
+                        .dots
+    section.section-map
+        .map-container
+            #map(data-locations=`${JSON.stringify(men.locations)}`)
+    section.full-descrisption
+        .full-descrisption-container
+            .full-descrisption-container-left
+                p.text-home Key features
+                ul.features-links
+                    each desc in men.detailsProduct
+                        li.text-heading=`${desc}`
+            .full-descrisption-container-right
+    section.full-descrisption
+        .title-full
+            p.text-home Full description
+            each des in men.description
+                p.text-heading=`${des.split(' . ')}`
+    //- section.sales-branch
+    //-     .sales-branch-container
+    //-         .sales-branch-container-title
+    //-             p.heading-sub FOR SALE
+    //-             p.heading-2 Local branches across London
+    //-         .sales-branch-container-images
+    //-             .sliderHouse
+    //-                 each house in men
+    //-                     .slideHouse
+    //-                         .slide-imgHouse
+    //-                             a(href=`/house/${house.slug}`)
+    //-                                 img.house-images(src=`/img/houses/${house.imageCover}` alt='Photo 1' data-house-id=`${house.id}`)
+    //-                         .slide-descrisption
+    //-                             p.heading-3=`${house.category}`
+    //-                             .slide-descrisption-svg
+    //-                                 .slide-descrisption-svg-1
+    //-                                     svg.house-icon
+    //-                                         use(href='/img/sprite1.svg#icon-bed')
+    //-                                     p=`${house.bedrooms}`
+    //-                                 .slide-descrisption-svg-2
+    //-                                     svg.house-icon
+    //-                                         use(href='/img/sprite1.svg#icon-label')
+    //-                                     p=`£${house.price}`
+    //-             .slider-controler
+    //-                 .controler-wrapper
+    //-                     //- button.slider__btn.slider__btn--left ←
+    //-                     a(href='/for-sale')
+    //-                         button.view-all View all the houses for sale

@@ -1,0 +1,29 @@
+extends base
+
+block content
+    .login-container
+        .login-form
+            .login-form-title
+                a.site-logo(href='/' aria-label='homepage')
+                    img.logo(src='/img/unsorted/logox3.png')
+                h2.form__label.please Please fill in this form to create an account
+                h2.form__label= msg
+            form.form.form--signup
+                .form__group
+                label.form__label(for='name') Name
+                input#firstname.form__input(type='name' placeholder='*Enter First Name' autofocus='' required='')
+                //- .form__group
+                //- label.form__label(for='name') Last name
+                //- input#lastname.form__input(type='name' placeholder='*Enter Last Name' autofocus='' required='')
+                .form__group
+                label.form__label(for='email') Email address
+                input#email.form__input(type='email', placeholder='you@example.com', required)
+                .form__group.ma-bt-md
+                input#password.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                .form__group.ma-bt-md
+                label.form__label(for='password') Password
+                input#passwordConfirm.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                .form__group
+                button.btn.btn--green Sign In
+
+

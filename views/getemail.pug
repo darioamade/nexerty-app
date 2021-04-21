@@ -1,0 +1,38 @@
+extends base
+
+block content
+    .get-started
+        .get-started-content
+            .get-started-content-wrapper
+                ul.header-nav__list
+                    svg.icon-book.icon-book-color
+                        use(href='/img/sprite1.svg#icon-arrow_left')
+                    li.header-nav__list-item
+                        a.nav__link(href='/get-started/reason-for-contact') back
+                p.heading-2 What is your email address?
+                p.text-plain We'll need your email so we can keep in touch and let you know how your sale is progressing.
+                form.form.form--login
+                    .form__group
+                        //- label.form__label(for='email') Email address
+                        input#email.form__input(type='email', placeholder='you@example.com', required)
+                    .form__group.changedFrom
+                        input.form__label(type='checkbox' name='email' value='yes' checked)
+                        label.form__input.form__input-changed(for='yes') I’d like to receive emails relating to my property, the area and the housing market.
+
+                     
+
+                a(href='/get-started/name')
+                    button.btn-more(style='border-color: #fff;') Next
+
+                //- .btn-stuffs
+                //-     p.heading-2 Book a valuation
+                //-     svg.icon-book
+                //-         use(href='/img/sprite2.svg#icon-chevron-thin-right')
+                //- .btn-stuffs
+                //-     p.heading-2 Speak to an agent
+                //-     svg.icon-book
+                //-         use(href='/img/sprite2.svg#icon-chevron-thin-right')
+                //- .btn-stuffs
+                //-     p.heading-2 Something else
+                //-     svg.icon-book
+                //-         use(href='/img/sprite2.svg#icon-chevron-thin-right')

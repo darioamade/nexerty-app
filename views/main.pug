@@ -1,0 +1,283 @@
+extends base
+
+block content 
+    section.section-2
+        .home-intro
+            .home-intro-title.changed
+                p.heading-sub ESTATE AGENCY
+                h1.heading-1 The modern way to move
+                p.text-plain.
+
+                    Get the best result from your sale by combining the best of traditional agents with powerful technology.
+
+                form.HeroForm___StyledForm-a1iuvi-1.hXhLuY
+                    .AddressPicker___StyledDiv-sc-25res2-3.fWKpgE(role='combobox' aria-expanded='false' aria-haspopup='listbox' aria-labelledby='downshift-7519-label')
+                        svg.svg-inline--fa.fa-map-marker-alt.fa-w-12.AddressPicker___StyledFontAwesomeIcon-sc-25res2-4.iOFxCv(aria-hidden='true' focusable='false' data-prefix='fas' data-icon='map-marker-alt' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512' color='rgb(50, 205, 50)')
+                            path(fill='currentColor' d='M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z')
+                        div
+                            input#downshift-7519-input.TextInput___StyledInput-sc-12n7u1z-1.fjpwLs(type='text'  name='hero-address-cta' placeholder='Enter your postcode' aria-autocomplete='list' aria-labelledby='downshift-7519-label' autocomplete='off')
+                        .AddressPicker___StyledDiv2-sc-25res2-6.cdEHHT
+                    .StackedAddressPicker___StyledDiv-sc-2y2bjr-0.dymAll.illusion-box
+                        //- button.Button__ButtonWrapper-zghgcj-0.Button___StyledButtonWrapper-zghgcj-2.fIpAkM(disabled data-test='stacked-address-picker-submit').
+                        a(href='/get-started/reason-for-contact')
+                            button.Button__ButtonWrapper-zghgcj-0.Button___StyledButtonWrapper-zghgcj-2.fIpAkM
+                                | Get started
+                .trust-content
+                    .trust-content-1
+                        img.all-star(src='/img/stars-5-1.svg' alt)
+                    .trust-content-2
+                        p Five starsRated excellent on
+                        img.all-star(src='/img/trus-20.svg' alt)
+                    .trust-content-3
+                        p We list on
+                        p.zoopla Zoopla
+                        p and 
+                        p.rightmove rightmove
+
+            .home-intro-video
+    section.realtors
+        h3.heading-2 Top 3 realtors
+        .realtors__list
+            img.realtors__img(src='/img/unsorted/realtor-1.jpeg' alt='Realtor-1')
+            .realtors__details
+                h4#margin.heading-4.heading-4--light.
+
+                    Keith Freeman
+
+                p.realtors__sold 459 house sold
+            img.realtors__img(src='/img/unsorted/realtor-2.jpeg' alt='Realtor-1')
+            .realtors__details
+                h4#margin.heading-4.heading-4--light Kate lee
+                p.realtors__sold 432 house sold
+            img.realtors__img(src='/img/unsorted/realtor-3.jpeg' alt='Realtor-1')
+            .realtors__details
+                h4#margin.heading-4.heading-4--light William king
+                p.realtors__sold 399 house sold
+    section.session-2
+        .seenon
+            p Seen On
+        .symbol
+            img.logo-1(src='/img/unsorted/logo-bbc.png' alt='Seen on logo 1')
+            img.logo-1(src='/img/unsorted/logo-forbes.png' alt='Seen on logo 2')
+            img.logo-1(src='/img/unsorted/logo-techcrunch.png' alt='Seen on logo 3')
+            img.logo-1(src='/img/unsorted/logo-bi.png' alt='Seen on logo 4')
+    section.sales-branch
+        .sales-branch-container
+            .sales-branch-container-title
+                p.heading-sub FOR SALE
+                p.heading-2 Local branches across London
+            .sales-branch-container-images
+                .sliderHouse
+                    each house in men
+                        .slideHouse
+                            .slide-imgHouse
+                                a(href=`/house/${house.slug}`)
+                                    img.house-images(src=`/img/houses/${house.imageCover}` alt='Photo 1' data-house-id=`${house.id}`)
+                            .slide-descrisption
+                                p.heading-3=`${house.category}`
+                                .slide-descrisption-svg
+                                    .slide-descrisption-svg-1
+                                        svg.house-icon
+                                            use(href='/img/sprite1.svg#icon-bed')
+                                        p=`${house.bedrooms}`
+                                    .slide-descrisption-svg-2
+                                        svg.house-icon
+                                            use(href='/img/sprite1.svg#icon-label')
+                                        p=`£${house.price.toLocaleString('en-GB')}`
+                .slider-controler
+                    .controler-wrapper
+                        //- button.slider__btn.slider__btn--left ←
+                        a(href='/for-sale')
+                            button.view-all View all the houses for sale
+                        //- button.slider__btn.slider__btn--right →
+            //- section.home-intro
+            //-     .hero-intro-sub
+            //-         p.heading-sub ESTATE AGENCY
+            //-     h1.heading-1 The modern way to move
+            //-     //  <h1 class="heading-1">The ultimate personal freedom</h1>  
+            //-     .search-area
+            //-         a(href='/buy.html')
+            //-         button.banner-btn Buy
+            //-         a(href='/hero.html#zz')
+            //-         button.banner-btn Rent
+            //-         a(href='/hero.html#zz')
+            //-         button.banner-btn Valuation
+            //- section.realtors
+            //-     h3.heading-2 Top 3 realtors
+            //-     .realtors__list
+            //-         img.realtors__img(src='/img/unsorted/realtor-1.jpeg' alt='Realtor-1')
+            //-         .realtors__details
+            //-             h4#margin.heading-4.heading-4--light Keith Freeman
+            //-             p.realtors__sold 459 house sold
+            //-         img.realtors__img(src='/img/unsorted/realtor-2.jpeg' alt='Realtor-1')
+            //-         .realtors__details
+            //-             h4#margin.heading-4.heading-4--light Kate lee
+            //-             p.realtors__sold 432 house sold
+            //-         img.realtors__img(src='/img/unsorted/realtor-3.jpeg' alt='Realtor-1')
+            //-         .realtors__details
+            //-             h4#margin.heading-4.heading-4--light William king
+            //-             p.realtors__sold 399 house sold
+            //-     section.services
+            //-         .service-1
+            //-             p#white.heading-2 Buy
+            //-         .service-2
+            //-             p#white.heading-2 Selling your property
+            //-         .service-3
+            //-             p#white.heading-2 Rent
+            //-         .service-4
+            //-             p#white.heading-2 best proprieties
+            //-         .service-5
+            //-             p#white.heading-2 Top 1 realtors
+            //-         .service-6
+            //-             p#white.heading-2 People Who You can Trust
+            //- session.session-2
+            //-     .seenon
+            //-         p Seen On
+            //-     .symbol
+            //-         img.logo-1(src='/img/unsorted/logo-bbc.png' alt='Seen on logo 1')
+            //-         img.logo-1(src='/img/unsorted/logo-forbes.png' alt='Seen on logo 2')
+            //-         img.logo-1(src='/img/unsorted/logo-techcrunch.png' alt='Seen on logo 3')
+            //-         img.logo-1(src='/img/unsorted/logo-bi.png' alt='Seen on logo 4')
+    section.services
+        .service-1
+            a(href='/buying')
+                p#white.heading-2 Buy
+        .service-2
+            a(href='/selling')
+                p#white.heading-2 Selling your property
+        .service-3
+            a(href='/for-sale')
+                p#white.heading-2 Rent
+        .service-4
+            a(href='/for-sale')
+                p#white.heading-2 best proprieties
+        .service-5
+            a(href='/how-it-works')
+                p#white.heading-2 Top 1 realtors
+        .service-6
+            a(href='/how-it-works')
+                p#white.heading-2 People Who You can Trust
+    section.about-area
+        .features
+            .child1
+                .features-top
+                    svg.feature__icon
+                        use(href='/img/unsorted/sprite.svg#icon-world')
+                    h4.heading-4.heading-4--dark Best luxury homes
+                .features-down
+                    p.plan.
+
+                        We make it easy to search and filter for the right property type, so you can live in the perfect new home. Nexerty lists all new home types
+
+            .child3
+                .features-top
+                    svg.feature__icon
+                        use(href='/img/unsorted/sprite.svg#icon-key')
+                    h4.heading-4.heading-4--dark New home in 4 days
+                .features-down
+                    p.plan.
+
+                        Talk To Our Experts When You Need Sound Financial Advice. Call Today!
+
+            .child3
+                .features-top
+                    svg.feature__icon
+                        use(href='/img/unsorted/sprite.svg#icon-location')
+                    h4.heading-4.heading-4--dark Best locations
+                .features-down
+                    p.plan.
+
+                        Best place and apartments with air conditioning, heating, and free WiFi. These modern apartments include a living area with a flat-screen.
+
+            .child4
+                .features-top
+                    svg.feature__icon
+                        use(href='/img/unsorted/sprite.svg#icon-phone')
+                    h4.heading-4.heading-4--dark Call us Today
+                .features-down
+                    p.plan.
+
+                        If you think all Estate Agents are the same, you haven’t worked with US. We are different. Everything we do will give you an altogether better experience of selling or letting your property.
+
+            .child5
+                .features-top
+                    svg.feature__icon
+                        use(href='/img/unsorted/sprite.svg#icon-user')
+                    h4.heading-4.heading-4--dark Our offices
+                .features-down
+                    p.plan.
+
+                        35 offices in Central London and over 70 across London .
+
+            .child6
+                .features-top
+                    svg.feature__icon
+                        use(href='img/sprite.svg#icon-calendar')
+                    h4.heading-4.heading-4--dark Book your appointment
+                .features-down
+                    p.plan.
+
+                        Click on 'Our offices' for all contact details, or use one of the other links if you are looking for one of our specialist services or departments.
+    section.buying
+        .buying-content(style='background-color: #fff;')
+            .buying-content-top(style='background-color: #081826;')
+                .buying-content-top-left
+                    img.img-house(src='/img/img/47.jpg' alt='img svg')
+                .buying-content-top-right
+                    p.heading-sub(style='color: #fff;') #1 AGENCY IN LONDON
+                    p.heading-1(style='color: #fff;') An estate agent fit for the 21st Century
+                    p.text-plain(style='color: #fff;')
+                        Making your next step on the property ladder should be exciting. But the reality is often stress and uncertainty. At Nexerty we’re building a better way.
+                    p.text-plain(style='color: #fff;')
+                        We think it's crazy that high street agents get you under offer, and then leave you to deal with the rest of the move by yourself.
+                    p.text-plain(style='color: #fff;')
+                        Not only are we first-class estate agents. We are also buying agents and chain specialists. The first estate agent built specifically for home movers, from sale to settled.
+
+                    a(href='')
+                        button.btn-more(style='border-color: #fff;') About Nexerty 
+            .buying-content-top
+                
+    section.get-touch-container
+        .get-touch
+            p.heading-1 
+                | Double the agent.
+                br
+                | No extra fee.
+            p.text-plain
+                Your Your local expert will arrange your free, no-obligation valuation.
+        form.Bookend___StyledForm-mzh7pm-5.kgWqFc
+        .AddressPicker___StyledDiv-sc-25res2-3.fWKpgE(role='combobox' aria-expanded='true' aria-haspopup='listbox' aria-labelledby='downshift-581-label' aria-owns='downshift-0-menu')
+            input#downshift-581-input.TextInput___StyledInput-sc-12n7u1z-1.euvAas(type='text' data-test='bookend-address' name='bookend-address' placeholder='Enter postcode' aria-autocomplete='list' aria-labelledby='downshift-581-label' autocomplete='off' aria-controls='downshift-0-menu')
+            .AddressPicker___StyledDiv2-sc-25res2-6.cdEHHT
+            button.Button__ButtonWrapper-zghgcj-0.Button___StyledButtonWrapper-zghgcj-2.kDNxOg.AddressPicker___StyledButton-sc-25res2-7.giNAuH(data-test='address-picker-submit-button' disabled) Get started
+                      
+    section.gallery
+        figure.gallery__item.gallery__item--1
+            img.gallery__img(src='/img/unsorted/1.jpg' alt='Gallery image 1')
+        figure#helper.gallery__item.gallery__item--2
+            img.gallery__img(src='/img/unsorted/23.jpg' alt='Gallery image 2')
+        figure.gallery__item.gallery__item--3
+            img.gallery__img(src='/img/unsorted/3.jpg' alt='Gallery image 3')
+        figure#helper.gallery__item.gallery__item--4
+            img.gallery__img(src='/img/unsorted/20.jpg' alt='Gallery image 4')
+        figure.gallery__item.gallery__item--5
+            img.gallery__img(src='/img/unsorted/5.jpg' alt='Gallery image 5')
+        figure.gallery__item.gallery__item--6
+            img.gallery__img(src='/img/unsorted//6.jpg' alt='Gallery image 6')
+        figure.gallery__item.gallery__item--7
+            img.gallery__img(src='/img/unsorted//7.jpg' alt='Gallery image 7')
+        figure#helper.gallery__item.gallery__item--8
+            img.gallery__img(src='/img/unsorted/19.jpg' alt='Gallery image 8')
+        figure.gallery__item.gallery__item--9
+            img.gallery__img(src='/img/unsorted/18.jpg' alt='Gallery image 9')
+        figure.gallery__item.gallery__item--10
+            img.gallery__img(src='/img/unsorted/25.jpg' alt='Gallery image 10')
+        figure.gallery__item.gallery__item--11
+            img.gallery__img(src='/img/unsorted/11.jpg' alt='Gallery image 11')
+        figure.gallery__item.gallery__item--12
+            img.gallery__img(src='/img/unsorted/24.jpg' alt='Gallery image 12')
+        figure.gallery__item.gallery__item--13
+            img.gallery__img(src='/img/unsorted/21.jpg' alt='Gallery image 13')
+        figure.gallery__item.gallery__item--14
+            img.gallery__img(src='/img/unsorted/22.jpg' alt='Gallery image 14')
+    

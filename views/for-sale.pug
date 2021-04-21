@@ -1,0 +1,169 @@
+extends base
+
+block content 
+    section.section-2
+        .home-intro
+            .home-intro-title
+                p.heading-sub BROWSE OUR PROPERTIES
+                h1.heading-1 Homes for sale
+                p.text-plain.
+
+                    A selection of homes Nexerty currently have for sale across London.
+            .home-intro-video
+
+    section.sales-branch
+        .sales-branch-container
+            .sales-branch-container-title
+                p.heading-sub FOR SALE
+                p.heading-2 Local branches across London
+            .sales-branch-container-images
+                .sliderHouse.slider-block-invert
+                    each house in men
+                        .slideHouse
+                            .slide-img
+                                a(href=`/for-sale/${house.slug}`)
+                                    img.house-images.show-on-scroll(src=`/img/houses/${house.imageCover}` loading='lazy' )
+                            .slide-descrisption
+                                p.heading-3=`${house.category}`
+                                .slide-descrisption-svg
+                                    .slide-descrisption-svg-1
+                                        svg.house-icon
+                                            use(href='/img/sprite1.svg#icon-bed')
+                                        p=`${house.bedrooms}`
+                                    .slide-descrisption-svg-2
+                                        svg.house-icon
+                                            use(href='/img/sprite1.svg#icon-label')
+                                            //- p=`£${house.price}`
+                                        p=`£${house.price.toLocaleString('en-gb')}`
+                .slider-controler.desactive
+                    .controler-wrapper
+                        button.slider__btn.slider__btn--left ←
+                        button.view-all View all the houses for sale
+                        button.slider__btn.slider__btn--right →
+    section.section-reviews
+        .reviews
+            .reviews__card
+                p.reviews__text.
+
+                    “ The UK property market process is archaic, but with Nexerty you remove uncertainty, know your options from the start, and can move on with your life rather than your life being on pause until the stress of selling is over. Thank you to everyone at Nexerty! ”
+
+                .reviews__avatar
+                    img.reviews__avatar-img(src='/img/users/user-2.jpg' alt='Lourdes Browning')
+                    h6.reviews__user Lourdes Browning
+                .reviews__rating
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--inactive
+                        use(href='/img/sprite1.svg#icon-star-empty')
+            .reviews__card
+                .reviews__avatar
+                    img.reviews__avatar-img(src='/img/users/user-3.jpg' alt='Sophie Louise Hart')
+                    h6.reviews__user Sophie Louise Hart
+                p.reviews__text.
+
+                    “ From our first meeting they were supportive and responsive to our needs. We felt we were in safe hands. The house received 11 offers and we were delighted with the service provided. I would definitely recommend the Nexerty team. ”
+
+                .reviews__rating
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--inactive
+                        use(href='/img/sprite1.svg#icon-star-empty')
+            .reviews__card
+                .reviews__avatar
+                    img.reviews__avatar-img(src='/img/users/user-9.jpg' alt='Cristian Vega')
+                    h6.reviews__user Cristian Vega
+                p.reviews__text.
+
+                    ” Great service, great people. Everyone I spoke to and dealt with offered a great value, consistent and professional service. The level of data they provide on both your own home and the one you want to buy is great and invaluable. ”
+
+                .reviews__rating
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--inactive
+                        use(href='/img/sprite1.svg#icon-star-empty')
+            .reviews__card
+                .reviews__avatar
+                    img.reviews__avatar-img(src='/img/users/user-14.jpg' alt='Laura Sarah Wilson')
+                    h6.reviews__user Laura Sarah Wilson
+                p.reviews__text.
+
+                    ” Great service, great people. Everyone I spoke to and dealt with offered a great value, consistent and professional service. The level of data they provide on both your own home and the one you want to buy is great and invaluable. ”
+
+                .reviews__rating
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--inactive
+                        use(href='/img/sprite1.svg#icon-star-empty')
+            .reviews__card
+                .reviews__avatar
+                    img.reviews__avatar-img(src='/img/users/user-15.jpg' alt='Max Smith')
+                    h6.reviews__user Max Smith
+                p.reviews__text.
+
+                    ” Nexerty were simply excellent. They worked incredibly hard to get us a buyer, and even secured us a sale at asking price. They helped us manage a tricky purchase, and a challenging sale process, and made sure everything was as smooth as possible. ”
+
+                .reviews__rating
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--inactive
+                        use(href='/img/sprite1.svg#icon-star-empty')
+            .reviews__card
+                .reviews__avatar
+                    img.reviews__avatar-img(src='/img/users/user-19.jpg' alt='John Riley')
+                    h6.reviews__user John Riley
+                p.reviews__text.
+
+                    ” I really couldn't recommend Nexerty more as Estate Agents. They were extremely attentive at looking at the market to make sure our flat was being seen. No hidden costs or nasty surprises and a friendly team who we trusted every step of the way. ”
+
+                .reviews__rating
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--active
+                        use(href='/img/sprite1.svg#icon-star-empty')
+                    svg.reviews__star.reviews__star--inactive
+                        use(href='/img/sprite1.svg#icon-star-empty')
+    section.get-touch-container
+        .get-touch
+            p.heading-1 
+                | Get in touch to book your free valuation
+            p.text-plain
+                Your Local expert will be in touch to discuss your home sale and find a time for us to provide a free, no-obligation valuation.
+        form.Bookend___StyledForm-mzh7pm-5.kgWqFc
+        .AddressPicker___StyledDiv-sc-25res2-3.fWKpgE(role='combobox' aria-expanded='true' aria-haspopup='listbox' aria-labelledby='downshift-581-label' aria-owns='downshift-0-menu')
+            input#downshift-581-input.TextInput___StyledInput-sc-12n7u1z-1.euvAas(type='text' data-test='bookend-address' name='bookend-address' placeholder='Enter postcode' aria-autocomplete='list' aria-labelledby='downshift-581-label' autocomplete='off' aria-controls='downshift-0-menu')
+            .AddressPicker___StyledDiv2-sc-25res2-6.cdEHHT
+            button.Button__ButtonWrapper-zghgcj-0.Button___StyledButtonWrapper-zghgcj-2.kDNxOg.AddressPicker___StyledButton-sc-25res2-7.giNAuH(data-test='address-picker-submit-button' disabled) Get started

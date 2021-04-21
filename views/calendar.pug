@@ -1,0 +1,37 @@
+extends base
+
+block content
+    .get-started
+        .get-started-content
+            .get-started-content-wrapper
+                ul.header-nav__list
+                    svg.icon-book.icon-book-color
+                        use(href='/img/sprite1.svg#icon-arrow_left')
+                    li.header-nav__list-item
+                        a.nav__link(href='/get-started/reason-for-contact') back
+                p.heading-2 When can we call?
+                p.text-plain Let us know a convenient time to chat. We'll talk you through selling with Nested, and answer any questions you might have.
+                .more-tex
+                    p.heading-2 Select a Day
+                .calendar
+                    .calendar-picture
+                        h2.month Month
+                        .calendar-arrows
+                            svg.icon-book.icon-book-color.rightColr#small-left
+                                use(href='/img/sprite2.svg#icon-chevron-small-left')
+                            svg.icon-book.icon-book-color.rightColr#small-right
+                                use(href='/img/sprite2.svg#icon-chevron-small-right')
+                    .calendar__date#lc
+                        .calenday__day Mo
+                        .calenday__day Tu
+                        .calenday__day Wed
+                        .calenday__day Th
+                        .calenday__day Fr
+                        .calenday__day St
+                        .calenday__day Su
+                p.location-country Uk, irelan, lisboa (4:26pm)
+                a(href='/get-started/email')
+                    button.btn-more(style='border-color: #fff;') Can't find a time?
+            
+
+

@@ -1,0 +1,105 @@
+extends base
+
+block content 
+    section.section-2
+        .home-intro
+            .home-intro-title
+                p.heading-sub THE DOUBLE AGENT
+                h1.heading-1 Save thousands on your new home
+                p.text-plain.
+
+                    When you sell with Nexerty, we help negotiate your purchase too, for no extra fee.
+            .home-intro-video
+    section.buying
+        .buying-content
+            .buying-content-top
+                .buying-content-top-left
+                    img.svg-house(src='/img/img/house-search-1.svg' alt='img svg')
+                .buying-content-top-right
+                    p.heading-sub BUYING AGENT
+                    p.heading-1 Negotiating the best deal on your behalf
+                    p.text-plain.
+
+                        We will help you find, evaluate and negotiate a great deal on your new home. On average, we negotiate £25,000 off the asking price.
+
+                    a(href)
+                        button.btn-more More about buying agents
+            .buying-content-top
+                .buying-content-top-left(style='order: 0')
+                    img.svg-house(src='/img/img/agents.svg' alt='img svg')
+                .buying-content-top-right(style='order: 0')
+                    p.heading-sub SUPPORT AT EVERY STEP
+                    p.heading-1 A dedicated agent to manage your chain
+                    p.text-plain.
+
+                        Your dedicated chain manager will organise solicitors, other agents and everyone else in the chain to keep your move on track.
+
+                    a(href)
+                        button.btn-more More about our agents
+            .buying-content-top
+                .buying-content-top-left(style='order: 1')
+                    img.svg-house(src='/img/img/moving2.svg' alt='img svg')
+                .buying-content-top-right(style='order: 1')
+                    p.heading-sub NEXERTY'S SECRET WEAPON
+                    p.heading-1 Move home before you sell
+                    p.text-plain.
+
+                        If your chain starts slowing you down, Nexerty can provide a cash advance so you can move home without the hassle of chain. Terms and additional fees apply.
+
+                    a(href)
+                        button.btn-more.
+
+                            More about moving chain-free
+
+            .find-out
+                .find-out-left
+                    p.heading-sub FIND OUT MORE
+                    p.text-plain.
+
+                        What happens when you sell your home with Nexerty.
+
+                .find-out-btn
+                    a(href='how-it-works')
+                        button.btn-more How it works
+
+    //- section.sales-branch
+    //-     .sales-branch-container
+    //-         .sales-branch-container-title
+    //-             p.heading-sub FOR SALE
+    //-             p.heading-2 Local branches across London
+    //-         .sales-branch-container-images
+    //-             .slider.slider-block-invert
+    //-                 each house in men
+    //-                     .slide
+    //-                         .slide-img
+    //-                             a(href=`/`)
+    //-                                 img.house-images(src=`/img/houses/${house.imageCover}` )
+    //-                         .slide-descrisption
+    //-                             p.heading-3=`${house.category}`
+    //-                             .slide-descrisption-svg
+    //-                                 .slide-descrisption-svg-1
+    //-                                     svg.house-icon
+    //-                                         use(href='/img/img/sprite1.svg#icon-bed')
+    //-                                     p=`${house.bedrooms}`
+    //-                                 .slide-descrisption-svg-2
+    //-                                     svg.house-icon
+    //-                                         use(href='/img/img/sprite1.svg#icon-label')
+    //-                                     p=`£${house.price}`
+    //-             .slider-controler.desactive
+    //-                 .controler-wrapper
+    //-                     button.slider__btn.slider__btn--left ←
+    //-                     button.view-all View all the houses for sale
+    //-                     button.slider__btn.slider__btn--right →
+    section.get-touch-container
+        .get-touch
+            p.heading-1 
+                | Double the agent.
+                br
+                | No extra fee.
+            p.text-plain
+                Your Your local expert will arrange your free, no-obligation valuation.
+        form.Bookend___StyledForm-mzh7pm-5.kgWqFc
+        .AddressPicker___StyledDiv-sc-25res2-3.fWKpgE(role='combobox' aria-expanded='true' aria-haspopup='listbox' aria-labelledby='downshift-581-label' aria-owns='downshift-0-menu')
+            input#downshift-581-input.TextInput___StyledInput-sc-12n7u1z-1.euvAas(type='text' data-test='bookend-address' name='bookend-address' placeholder='Enter postcode' aria-autocomplete='list' aria-labelledby='downshift-581-label' autocomplete='off' aria-controls='downshift-0-menu')
+            .AddressPicker___StyledDiv2-sc-25res2-6.cdEHHT
+            button.Button__ButtonWrapper-zghgcj-0.Button___StyledButtonWrapper-zghgcj-2.kDNxOg.AddressPicker___StyledButton-sc-25res2-7.giNAuH(data-test='address-picker-submit-button' disabled) Get started

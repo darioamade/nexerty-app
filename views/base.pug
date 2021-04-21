@@ -1,0 +1,39 @@
+doctype html
+html
+    head
+        block head
+            meta(charset='UTF-8')
+            meta(name='viewport' content='width=device-width, initial-scale=1.0')
+            meta(name='description' content='Nexerty Agency is all in one platform for buying and rent house.')
+            link(href='https://fonts.googleapis.com/css?family=Roboto:100i,300,300i,400i,500,700,900&display=swap' rel='stylesheet')
+            link(href='https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap' rel='stylesheet')
+            link(href='https://fonts.googleapis.com/css?family=Courier+Prime:700|Montserrat:200,300,400,500,600,700,800,900&display=swap' rel='stylesheet')
+            link(rel='stylesheet' href='/css/style.css')
+            link(rel='shortcut icon' type='image/png' href='/img/unsorted/Favicon.png')
+            title Nexerty Agency | #{title}
+
+
+
+    body
+        // Conatiner
+        .container
+            // HEADER
+            include _header
+
+            // CONTENT
+            block content
+
+            // FOOTER
+            include _footer
+               
+            //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js')
+            //- script(src='/js/mapbox.js')
+         
+            //- script(src='/js/signup.js')
+
+            //- script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js')
+            
+            //- script(src='/js/app.js')
+            //- script(src='/js/login.js')
+            script(src='/js/moment.js')
+            script(src='/js/bundle.js')
