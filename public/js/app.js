@@ -76,8 +76,8 @@
       (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
     );
   };
-
-  // Next slide
+  
+// Next slide
   const nextSlide = function () {
     if (curSlide === maxSlide - 1) {
       curSlide = 0;
