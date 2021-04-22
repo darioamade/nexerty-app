@@ -8,9 +8,10 @@ export const buyProduct = async (menId) => {
   try {
     // 1) Get (The session ) checkout session from API
     const session = await axios(
-      `http://localhost:4000/api/v1/bookings/checkout-session/${menId}`
+      //`http://localhost:5500/api/v1/bookings/checkout-session/${menId}`
+      `/api/v1/bookings/checkout-session/${menId}`
     );
-    console.log(session);
+    // console.log(session);
 
     // 2) Create checkout form + charge credit card
 

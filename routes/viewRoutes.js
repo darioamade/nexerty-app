@@ -42,7 +42,7 @@ router.get('/get-started/name', viewsController.getName);
 
 //BUG BUGBUGBUGBUGBUGBUGBUG
 router.get('/men/new', viewsController.getMenNew); //NOTE not in use now
-router.get('/girls/new', viewsController.getGirls);
+
 //TEST
 router.get('/men/best-sellers', viewsController.getMenBestSeller);
 router.get('/men/:slug', viewsController.getDescription); // this was '/description/:slug'`NOTE not in use now
@@ -84,8 +84,8 @@ router.get(
   '/',
   bookingcontroller.createBookingCheckout,
   viewsController.getWomen
-); // Here is the route of the website '/wome',
-router.get('/girls', viewsController.getGirl);
+); 
+
 // NOTE this route is suppose to be account details
 router.get(
   '/account/orders/',
@@ -93,18 +93,11 @@ router.get(
   viewsController.getMyOrders
 ); // my tours
 
-router.get('/women', viewsController.getWomen);
-router.get('/women/new', viewsController.getWomenNew);
-router.get('/women/:slug', viewsController.getDescriptionWomen);
-// router.get('/women', authcontroller.protect, viewsController.getWomen);
+
 router.get('/account', viewsController.getAccount); // Leave not protect for none register guess
 
 router.get('/pic', viewsController.getPic);
 router.get('/search', viewsController.getSearch);
 router.get('/logintest', viewsController.getLoginTest);
-
-router.get('/girls/:slug', viewsController.getDescriptionGirls);
-
-router.get('/sustainability-information', viewsController.getSustainability);
 
 module.exports = router;

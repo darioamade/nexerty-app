@@ -1,6 +1,7 @@
 import '@babel/polyfill';
 import { displayMap } from './mapbox';
 import { login, logout, signup } from './login';
+// import {  updateSettings } from './updateSettings';
 import { updateUserData } from './updateSettings';
 
 // import { slider } from './slider';
@@ -26,16 +27,12 @@ const navFooterLinks = document.querySelector('.nav-footer-links');
 const howItWork = document.querySelector('.how-it-work');
 
 const monthOnCalendar = document.querySelector('.month');
-const locationCountry  = document.querySelector('.location-country ');
+const locationCountry = document.querySelector('.location-country ');
 
-
-  const slides = document.querySelectorAll('.slide');
-  const btnLeft = document.querySelector('.slider__btn--left-overview');
-  const btnRight = document.querySelector('.slider__btn--right-overview');
-  const dotContainer = document.querySelector('.dots');
-
-
-
+const slides = document.querySelectorAll('.slide');
+const btnLeft = document.querySelector('.slider__btn--left-overview');
+const btnRight = document.querySelector('.slider__btn--right-overview');
+const dotContainer = document.querySelector('.dots');
 
 //DELEGATION
 if (mapBox) {
@@ -65,16 +62,18 @@ if (signinForm)
 if (userDataForm) {
   userDataForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    updateUserData(name, email);
+    const form = new FormData();
+    form.append('name', document.getElementById('name').value);
+    form.append('email', document.getElementById('email').value);
+    form.append('photo', document.getElementById('photo').files[0]);
+
+    updateUserData(form, 'data');
   });
 }
 // slider();
 
 if (headerNavMenu) {
   headerNavMenu.addEventListener('click', function () {
-    console.log('jafkldhsjv');
     NavMenu.classList.add('nav-menu-active');
   });
 }
@@ -119,7 +118,7 @@ if (plusFooter3) {
       document.querySelector('.footer3').classList.toggle('footerHide1');
     });
 }
-if (locationCountry){
+if (locationCountry) {
   const monthArr = [
     'January',
     'February',
@@ -224,7 +223,6 @@ if (locationCountry){
   }
 }
 
-
 /* 
   function qs(selector, all = false) {
     return all
@@ -278,10 +276,9 @@ if (locationCountry){
   scrollHandler();
   line.style.display = 'block';
   window.addEventListener('scroll', scrollHandler); */
- 
 
 // if (slider)
-
+/* 
   const slider = function (slide) {
     let curSlide = 0;
     const maxSlide = slides.length;
@@ -359,4 +356,4 @@ if (locationCountry){
       }
     });
   };
-slider()
+slider() */

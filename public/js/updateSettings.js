@@ -1,13 +1,15 @@
 // Update Data
 import axios from 'axios';
 // import { showAlert } from './alerts';
-
-/* export const updateSettings = async (data, type) => {
+/* 
+export const updateSettings = async (data, type) => {
   try {
-    const url =
-      type === 'password'
-        ? 'http://localhost:5500/api/v1/users/updateMyPassword'
-        : 'http://localhost:5500/api/v1/users/updateMe';
+    const url = type === 'password';
+    type === 'password'
+       // ? '/api/v1/users/updateMyPassword'
+        // : '/api/v1/users/updateMe';
+       ? 'http://localhost:5500/api/v1/users/updateMyPassword'
+      : 'http://localhost:5500/api/v1/users/updateMe';
 
     const res = await axios({
       method: 'PATCH',
@@ -16,19 +18,21 @@ import axios from 'axios';
     });
 
     if (res.data.status === 'success') {
-      showAlert('success', `${type.toUpperCase()} updated successfully!`);
+      //showAlert('success', `${type.toUpperCase()} updated successfully!`);
+      console.log('success', `${type.toUpperCase()} updated successfully!`);
     }
   } catch (err) {
-    showAlert('error', err.response.data.message);
+    // showAlert('error', err.response.data.message);
+      console.log('error', err.response.data.message);
   }
-};
- */
+}; */
 
-export const updateUserData = async (name, email) => {
+ export const updateUserData = async (name, email) => {
   try {
     const res = await axios({
       method: 'PATCH',
-      url: 'http://localhost:5500/api/v1/users/updateMe',
+      //url: 'http://localhost:5500/api/v1/users/updateMe',
+      url: '/api/v1/users/updateMe',
       data: {
         name,
         email,

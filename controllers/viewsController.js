@@ -1,6 +1,4 @@
 const Men = require('../models/menModel');
-const Women = require('../models/womanModel');
-const Girls = require('../models/girlModel');
 const User = require('../models/userModel');
 const Booking = require('../models/bookingModel');
 const catchAsync = require('../utils/catchAsync');
@@ -57,11 +55,7 @@ exports.getOverview = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.getGirl = catchAsync(async (req, res, next) => {
-  res.status(200).render('women', {
-    title: 'Mens colection',
-  });
-});
+
 
 /* exports.aliasBestSeller = (req, res, next) => {
   req.query.limit = '5';
