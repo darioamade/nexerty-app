@@ -5,7 +5,7 @@ const bookingcontroller = require('../controllers/bookingController');
 
 const router = express.Router();
 
-// router.use(authcontroller.isLoggedIn); // NOTE not needed for now
+router.use(authcontroller.isLoggedIn); // NOTE not needed for now
 
 router.get('/', authcontroller.isLoggedIn, viewsController.getOverview);
 router.get('/house/:slug', authcontroller.isLoggedIn, viewsController.getHouse); // House overview
