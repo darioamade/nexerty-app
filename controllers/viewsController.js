@@ -332,8 +332,7 @@ exports.getEmail = catchAsync(async (req, res, next) => {
     men,
   });
 });
-exports.
-getName = catchAsync(async (req, res, next) => {
+exports.getName = catchAsync(async (req, res, next) => {
   const men = await Men.find().populate();
   res.status(200).render('getname', {
     title: `${men.name}`,
@@ -341,7 +340,13 @@ getName = catchAsync(async (req, res, next) => {
   });
 });
 
-
+exports.getContactMail = catchAsync(async (req, res, next) => {
+  const men = await Men.find().populate();
+  res.status(200).render('getintouch', {
+    title: `${men.name}`,
+    men,
+  });
+});
 
 exports.getGirl = catchAsync(async (req, res, next) => {
   res.status(200).render('women', {

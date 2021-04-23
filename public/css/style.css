@@ -238,6 +238,7 @@ body {
   margin: 0 auto;
   position: absolute;
   bottom: 0;
+  bottom: 2rem;
   left: 0;
   right: 0;
   display: -webkit-box;
@@ -3184,7 +3185,7 @@ sliderHouse::-webkit-scrollbar-thumb {
   gap: 1rem;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 768px) {
   .slide-descrisption-svg {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -3415,6 +3416,14 @@ sliderHouse::-webkit-scrollbar-thumb {
   gap: 1rem;
 }
 
+@media screen and (max-width: 768px) {
+  .price-badge {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .price-badge span {
   font-weight: 400;
   font-size: 10px;
@@ -3456,12 +3465,6 @@ sliderHouse::-webkit-scrollbar-thumb {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
-}
-
-@media screen and (max-width: 768px) {
-  .section-map {
-    display: none;
-  }
 }
 
 .map-container {
@@ -3655,6 +3658,12 @@ sliderHouse::-webkit-scrollbar-thumb {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  .title-full {
+    padding: 2rem;
+  }
 }
 
 .text-heading {
@@ -5922,8 +5931,6 @@ ul li a {
 
 .get-started {
   width: 100vw;
-  height: auto;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5938,7 +5945,8 @@ ul li a {
 .get-started-content {
   width: 100%;
   margin: 0px auto;
-  margin-top: 4rem;
+  margin-top: 8rem;
+  padding: 2rem 0;
   max-width: 1440px;
   background-color: white;
   min-height: 100vh;
@@ -5967,7 +5975,7 @@ ul li a {
 
 @media screen and (max-width: 768px) {
   .get-started-content .btn-more {
-    font-size: 3.8rem;
+    font-size: 2rem;
   }
 }
 
@@ -5993,6 +6001,17 @@ ul li a {
   gap: 2rem;
 }
 
+@media screen and (max-width: 768px) {
+  .get-started-content-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .get-started-content-wrapper .text-plain {
   font-size: 1.4rem;
   margin-bottom: 3rem;
@@ -6004,9 +6023,38 @@ ul li a {
   line-height: 36px;
   color: #0a4254;
   font-size: 32px;
-  line-height: 36px;
   font-weight: 700;
   margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .get-started-content-wrapper .heading-2 {
+    font-size: 22px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+.date-time {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-weight: 400;
+  font-size: 14px;
+  color: #081826;
+  gap: .5rem;
+  padding: 2rem 0;
 }
 
 .changedFrom {
@@ -6053,6 +6101,12 @@ ul li a {
   padding: 2rem 2rem;
 }
 
+@media screen and (max-width: 768px) {
+  .btn-stuffs {
+    padding: 1rem 2rem;
+  }
+}
+
 .btn-stuffs a {
   list-style: none;
   text-decoration: none;
@@ -6065,6 +6119,12 @@ ul li a {
   line-height: 36px;
   color: #0a4254;
   font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-stuffs .heading-2 {
+    font-size: 18px;
+  }
 }
 
 .btn-stuffs:hover {
@@ -6096,6 +6156,14 @@ ul li a {
   gap: 0;
 }
 
+@media screen and (max-width: 1020px) {
+  .get-started-content-wrapper .header-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .more-tex {
   width: 100%;
   padding: 4rem;
@@ -6110,6 +6178,12 @@ ul li a {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .more-tex {
+    padding: 2rem;
+  }
 }
 
 .more-tex .heading-2 {
@@ -6232,6 +6306,10 @@ ul li a {
   font-weight: 400;
   font-size: 14px;
   color: #081826;
-  padding: 0 2rem 4rem 2rem;
+  padding: 0 0rem 4rem 2rem;
+}
+
+.location5 {
+  fill: #32cd32;
 }
 /*# sourceMappingURL=style.css.map */

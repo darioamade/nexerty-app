@@ -38,6 +38,7 @@ router.get('/get-started/reason-for-contact', viewsController.getStarted);
 router.get('/get-started/calendar', viewsController.getCalendar);
 router.get('/get-started/email', viewsController.getEmail);
 router.get('/get-started/name', viewsController.getName);
+router.get('/get-started/email-address', viewsController.getContactMail);
 //IMPORTANT
 
 //BUG BUGBUGBUGBUGBUGBUGBUG

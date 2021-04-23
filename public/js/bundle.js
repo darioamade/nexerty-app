@@ -9291,7 +9291,8 @@ var mapBox = document.getElementById('map');
 var logginForm = document.querySelector('.form--login');
 var logoutBtn = document.getElementById('logoutBtn');
 var signinForm = document.querySelector('.form--signup');
-var userDataForm = document.querySelector('.form-user-data'); // VALUES
+var userDataForm = document.querySelector('.form-user-data');
+var getStartedForm = document.querySelector('.HeroForm___StyledForm-a1iuvi-1'); // VALUES
 
 var headerNavMenu = document.querySelector('.header-nav-menu');
 var closeNavMenu = document.querySelector('.nav-menu-container-icon');
@@ -9304,7 +9305,8 @@ var plusFooter3 = document.querySelector('.plus3');
 var navFooterLinks = document.querySelector('.nav-footer-links');
 var howItWork = document.querySelector('.how-it-work');
 var monthOnCalendar = document.querySelector('.month');
-var locationCountry = document.querySelector('.location-country ');
+var locationCountry = document.querySelector('.location-country');
+var labelDate = document.querySelector('.labelDate');
 var slides = document.querySelectorAll('.slide');
 var btnLeft = document.querySelector('.slider__btn--left-overview');
 var btnRight = document.querySelector('.slider__btn--right-overview');
@@ -9340,8 +9342,16 @@ if (userDataForm) {
     form.append('photo', document.getElementById('photo').files[0]);
     (0, _updateSettings.updateUserData)(form, 'data');
   });
-} // slider();
+}
 
+if (getStartedForm) {
+  getStartedForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var postCode = document.getElementById('downshift-7519-input').value;
+    console.log(postCode);
+    location.assign('/get-started/reason-for-contact');
+  });
+}
 
 if (headerNavMenu) {
   headerNavMenu.addEventListener('click', function () {
@@ -9397,7 +9407,7 @@ if (locationCountry) {
     var day = d.getDay();
     day = dayArr[day];
     var date = d.getDate();
-    locationCountry.innerHTML = date + ', ' + day;
+    locationCountry.innerHTML = "".concat(date, ", ").concat(day);
     monthOnCalendar.innerHTML = month;
     return {
       m: month,
@@ -9406,6 +9416,15 @@ if (locationCountry) {
       yr: d.getFullYear()
     };
   }
+
+  var locale = navigator.language;
+  var now = new Date();
+  var options = {
+    hour: 'numeric',
+    minute: 'numeric' // weekday: 'long',
+
+  };
+  labelDate.textContent = new Intl.DateTimeFormat(locale, options).format(now);
 
   function generateCalendar() {
     var days;
@@ -9444,7 +9463,11 @@ if (locationCountry) {
       document.getElementById('lc').appendChild(_element);
     }
   }
-}
+} // const curentday = document.querySelector('.calendar__number--current');
+// const avalibleDay = document.querySelector('.calendar__number');
+// curentday.addEventListener('click', function(){
+// })
+
 /* 
   function qs(selector, all = false) {
     return all

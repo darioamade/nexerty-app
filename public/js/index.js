@@ -13,6 +13,9 @@ const logginForm = document.querySelector('.form--login');
 const logoutBtn = document.getElementById('logoutBtn');
 const signinForm = document.querySelector('.form--signup');
 const userDataForm = document.querySelector('.form-user-data');
+const getStartedForm = document.querySelector(
+  '.HeroForm___StyledForm-a1iuvi-1'
+);
 
 // VALUES
 const headerNavMenu = document.querySelector('.header-nav-menu');
@@ -27,7 +30,8 @@ const navFooterLinks = document.querySelector('.nav-footer-links');
 const howItWork = document.querySelector('.how-it-work');
 
 const monthOnCalendar = document.querySelector('.month');
-const locationCountry = document.querySelector('.location-country ');
+const locationCountry = document.querySelector('.location-country');
+const labelDate = document.querySelector('.labelDate');
 
 const slides = document.querySelectorAll('.slide');
 const btnLeft = document.querySelector('.slider__btn--left-overview');
@@ -70,7 +74,14 @@ if (userDataForm) {
     updateUserData(form, 'data');
   });
 }
-// slider();
+if (getStartedForm) {
+  getStartedForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const postCode = document.getElementById('downshift-7519-input').value;
+    console.log(postCode);
+    location.assign('/get-started/reason-for-contact');
+  });
+}
 
 if (headerNavMenu) {
   headerNavMenu.addEventListener('click', function () {
@@ -170,13 +181,28 @@ if (locationCountry) {
 
     let day = d.getDay();
     day = dayArr[day];
+ 
 
     let date = d.getDate();
 
-    locationCountry.innerHTML = date + ', ' + day;
+    locationCountry.innerHTML = `${date}, ${day}`;
     monthOnCalendar.innerHTML = month;
     return { m: month, dy: day, dt: date, yr: d.getFullYear() };
   }
+
+
+
+  const locale = navigator.language;
+      const now = new Date();
+      const options = {
+        hour: 'numeric',
+        minute: 'numeric',
+        // weekday: 'long',
+      };
+    labelDate.textContent = new Intl.DateTimeFormat(locale, options).format(
+      now
+    );
+
 
   function generateCalendar() {
     let days;
@@ -222,6 +248,12 @@ if (locationCountry) {
     }
   }
 }
+
+// const curentday = document.querySelector('.calendar__number--current');
+// const avalibleDay = document.querySelector('.calendar__number');
+// curentday.addEventListener('click', function(){
+
+// })
 
 /* 
   function qs(selector, all = false) {
@@ -279,81 +311,81 @@ if (locationCountry) {
 
 // if (slider)
 
-  const slider = function (slide) {
-    let curSlide = 0;
-    const maxSlide = slides.length;
+const slider = function (slide) {
+  let curSlide = 0;
+  const maxSlide = slides.length;
 
-    // Functions
-    const createDots = function () {
-      slides.forEach(function (_, i) {
-        dotContainer.insertAdjacentHTML(
-          'beforeend',
-          `<button class="dots__dot" data-slide="${i}"></button>`
-        );
-      });
-    };
-
-    const activateDot = function (slide) {
-      document
-        .querySelectorAll('.dots__dot')
-        .forEach((dot) => dot.classList.remove('dots__dot--active'));
-
-      document
-        .querySelector(`.dots__dot[data-slide="${slide}"]`)
-        .classList.add('dots__dot--active');
-    };
-
-    const goToSlide = function (slide) {
-      slides.forEach(
-        (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+  // Functions
+  const createDots = function () {
+    slides.forEach(function (_, i) {
+      dotContainer.insertAdjacentHTML(
+        'beforeend',
+        `<button class="dots__dot" data-slide="${i}"></button>`
       );
-    };
-
-    // Next slide
-    const nextSlide = function () {
-      if (curSlide === maxSlide - 1) {
-        curSlide = 0;
-      } else {
-        curSlide++;
-      }
-
-      goToSlide(curSlide);
-      activateDot(curSlide);
-    };
-
-    const prevSlide = function () {
-      if (curSlide === 0) {
-        curSlide = maxSlide - 1;
-      } else {
-        curSlide--;
-      }
-      goToSlide(curSlide);
-      activateDot(curSlide);
-    };
-
-    const init = function () {
-      goToSlide(0);
-      createDots();
-
-      activateDot(0);
-    };
-    init();
-
-    //  Event handlers
-    btnRight.addEventListener('click', nextSlide);
-    btnLeft.addEventListener('click', prevSlide);
-
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowLeft') prevSlide();
-      e.key === 'ArrowRight' && nextSlide();
-    });
-
-    dotContainer.addEventListener('click', function (e) {
-      if (e.target.classList.contains('dots__dot')) {
-        const { slide } = e.target.dataset;
-        goToSlide(slide);
-        activateDot(slide);
-      }
     });
   };
-slider() 
+
+  const activateDot = function (slide) {
+    document
+      .querySelectorAll('.dots__dot')
+      .forEach((dot) => dot.classList.remove('dots__dot--active'));
+
+    document
+      .querySelector(`.dots__dot[data-slide="${slide}"]`)
+      .classList.add('dots__dot--active');
+  };
+
+  const goToSlide = function (slide) {
+    slides.forEach(
+      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    );
+  };
+
+  // Next slide
+  const nextSlide = function () {
+    if (curSlide === maxSlide - 1) {
+      curSlide = 0;
+    } else {
+      curSlide++;
+    }
+
+    goToSlide(curSlide);
+    activateDot(curSlide);
+  };
+
+  const prevSlide = function () {
+    if (curSlide === 0) {
+      curSlide = maxSlide - 1;
+    } else {
+      curSlide--;
+    }
+    goToSlide(curSlide);
+    activateDot(curSlide);
+  };
+
+  const init = function () {
+    goToSlide(0);
+    createDots();
+
+    activateDot(0);
+  };
+  init();
+
+  //  Event handlers
+  btnRight.addEventListener('click', nextSlide);
+  btnLeft.addEventListener('click', prevSlide);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') prevSlide();
+    e.key === 'ArrowRight' && nextSlide();
+  });
+
+  dotContainer.addEventListener('click', function (e) {
+    if (e.target.classList.contains('dots__dot')) {
+      const { slide } = e.target.dataset;
+      goToSlide(slide);
+      activateDot(slide);
+    }
+  });
+};
+slider();

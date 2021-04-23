@@ -201,6 +201,7 @@ body {
   margin: 0 auto;
   position: absolute;
   bottom: 0;
+  bottom: 2rem;
   left: 0;
   right: 0;
 
@@ -2346,7 +2347,7 @@ sliderHouse::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 768px) {
     justify-content: center;
     align-items: center;
     gap: 2rem;
@@ -2517,6 +2518,9 @@ sliderHouse::-webkit-scrollbar-thumb {
   align-items: center;
   padding-bottom: 2rem;
   gap: 1rem;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
   span {
     font-weight: 400;
     font-size: 10px;
@@ -2546,10 +2550,6 @@ sliderHouse::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-    @media screen and (max-width: 768px){
-      display: none;
-      
-    }
 }
 .map-container {
   width: 100%;
@@ -2559,9 +2559,9 @@ sliderHouse::-webkit-scrollbar-thumb {
   width: 100%;
   position: relative;
   height: 65rem;
-    @media screen and (max-width: 768px) {
-        height: 50vh
-    }
+  @media screen and (max-width: 768px) {
+    height: 50vh;
+  }
 }
 
 #map {
@@ -2685,6 +2685,9 @@ sliderHouse::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  @media screen and (max-width: 768px) {
+    padding: 2rem;
+  }
 }
 
 .text-heading {
@@ -3954,9 +3957,9 @@ a .btn-error {
   padding: 4rem;
   object-fit: fill;
   border-radius: 8px;
-    @media screen and (max-width: 768px){
-        padding: 0rem;
-    }
+  @media screen and (max-width: 768px) {
+    padding: 0rem;
+  }
   //   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
   // clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
   //    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
@@ -4376,8 +4379,6 @@ ul li a {
 }
 .get-started {
   width: 100vw;
-  height: auto;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4386,7 +4387,8 @@ ul li a {
 .get-started-content {
   width: 100%;
   margin: 0px auto;
-  margin-top: 4rem;
+  margin-top: 8rem;
+  padding: 2rem 0;
   max-width: 1440px;
   background-color: white;
   min-height: 100vh;
@@ -4403,7 +4405,7 @@ ul li a {
     letter-spacing: 2px;
     padding: 1.5rem 2rem;
     @media screen and (max-width: 768px) {
-      font-size: 3.8rem;
+      font-size: 2rem;
     }
   }
   &-wrapper {
@@ -4417,7 +4419,10 @@ ul li a {
     align-items: flex-start;
     flex-direction: column;
     gap: 2rem;
-
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+      align-items: center;
+    }
     .text-plain {
       font-size: 1.4rem;
       margin-bottom: 3rem;
@@ -4430,11 +4435,28 @@ ul li a {
       line-height: 36px;
       color: #0a4254;
       font-size: 32px;
-      line-height: 36px;
       font-weight: 700;
       margin-bottom: 2rem;
+      @media only screen and (max-width: 768px) {
+        font-size: 22px;
+        line-height: 24px;
+        text-align: center;
+      }
     }
   }
+}
+
+.date-time {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+   font-weight: 400;
+  font-size: 14px;
+  color: #081826;
+  gap: .5rem;
+  padding: 2rem 0;
 }
 .changedFrom {
   display: flex;
@@ -4458,6 +4480,9 @@ ul li a {
   border: 0.5px solid #ccc;
   border-radius: 8px;
   padding: 2rem 2rem;
+  @media screen and (max-width: 768px) {
+    padding: 1rem 2rem;
+  }
   a {
     list-style: none;
     text-decoration: none;
@@ -4469,6 +4494,9 @@ ul li a {
     line-height: 36px;
     color: #0a4254;
     font-weight: 400;
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+    }
   }
   &:hover {
     box-shadow: var(--shadow-light);
@@ -4495,6 +4523,9 @@ ul li a {
 
 .get-started-content-wrapper .header-nav__list {
   gap: 0;
+  @media screen and (max-width: 1020px) {
+    display: flex;
+  }
 }
 .more-tex {
   width: 100%;
@@ -4503,6 +4534,9 @@ ul li a {
   justify-content: center;
   align-items: center;
   align-content: center;
+  @media screen and (max-width: 768px) {
+    padding: 2rem;
+  }
   .heading-2 {
     margin: 0;
     padding: 0 2rem;
@@ -4597,5 +4631,9 @@ ul li a {
   font-weight: 400;
   font-size: 14px;
   color: #081826;
-  padding: 0 2rem 4rem 2rem;
+  padding: 0 0rem 4rem 2rem;
+}
+
+.location5 {
+  fill: #32cd32;
 }
