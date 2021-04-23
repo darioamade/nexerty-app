@@ -8,7 +8,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
-const compression = require('compression')
+const compression = require('compression');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -20,6 +20,7 @@ const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
 
+app.enable('trust proxy');
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -79,7 +80,7 @@ app.use(
   })
 );
 
-app.use(compression())
+app.use(compression());
 // Test middleware
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
@@ -89,13 +90,11 @@ app.use((req, res, next) => {
 
 // Test middleware
 app.use('/', viewRouter);
-app.use('/api/v1/house', menRouter); 
+app.use('/api/v1/house', menRouter);
 app.use('/api/v1/users', usersRouter);
 app.use('/api/v1/reviews', reviewRouter);
 app.use('/api/v1/bookings', bookingRouter);
 //NOTE my test stuffs
-
-
 
 //NOTE UNHANDLED ROUTES and Has to be at the End
 app.all('*', (req, res, next) => {
@@ -104,8 +103,7 @@ app.all('*', (req, res, next) => {
 
 app.use(globalErrorHandler);
 
-module.exports = app; 
-
+module.exports = app;
 
 /* 
 IMPORTANT

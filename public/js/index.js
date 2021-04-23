@@ -278,7 +278,7 @@ if (locationCountry) {
   window.addEventListener('scroll', scrollHandler); */
 
 // if (slider)
-/* 
+
   const slider = function (slide) {
     let curSlide = 0;
     const maxSlide = slides.length;
@@ -356,4 +356,4 @@ if (locationCountry) {
       }
     });
   };
-slider() */
+slider() 
