@@ -3458,6 +3458,12 @@ sliderHouse::-webkit-scrollbar-thumb {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+  .section-map {
+    display: none;
+  }
+}
+
 .map-container {
   width: 100%;
   border: 2px solid #009dff;
@@ -3467,6 +3473,12 @@ sliderHouse::-webkit-scrollbar-thumb {
   width: 100%;
   position: relative;
   height: 65rem;
+}
+
+@media screen and (max-width: 768px) {
+  .section-map {
+    height: 50vh;
+  }
 }
 
 #map {

@@ -2546,6 +2546,10 @@ sliderHouse::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+    @media screen and (max-width: 768px){
+      display: none;
+      
+    }
 }
 .map-container {
   width: 100%;
@@ -2555,6 +2559,9 @@ sliderHouse::-webkit-scrollbar-thumb {
   width: 100%;
   position: relative;
   height: 65rem;
+    @media screen and (max-width: 768px) {
+        height: 50vh
+    }
 }
 
 #map {
