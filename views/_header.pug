@@ -1,4 +1,5 @@
 .nav-menu
+    .overlay
     .nav-menu-container
         svg.nav-menu-container-icon
             use(href='/img/sprite.svg#icon-close')
@@ -22,18 +23,18 @@
                 use(href='/img/sprite.svg#icon-sale1')
             li.nav-menu-container-wrapper-link
                 a.nav-menu-container-wrapper-links(href='/for-sale') For sale
-            if user
-                .nav-menu-container-btn
-                    a(href='/me')
-                        button.btn-login-menu1 My Account
-                    a(href='/logout')
-                        button.btn-login-menu.nav-menu-logout Logout
-            else
-                .nav-menu-container-btn
-                    a(href='/login')
-                        button.btn-login-menu1 Login
-                    a(href='/signup')
-                        button.btn-login-menu Sign up
+    if user
+        .nav-menu-container-btn
+            a(href='/me')
+                button.btn-login-menu1 My Account
+            a(href='/logout')
+                button.btn-login-menu.nav-menu-logout Logout
+    else
+        .nav-menu-container-btn
+            a(href='/login')
+                button.btn-login-menu1 Login
+            a(href='/signup')
+                button.btn-login-menu Sign up
 header
     .header
         a.site-logo(href='/' aria-label='homepage')

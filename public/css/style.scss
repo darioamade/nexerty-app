@@ -86,7 +86,7 @@ body {
     min-width: 60%;
     z-index: 900;
   }
-  @media only screen and (min-width: 450px) {
+  @media only screen and (max-width: 450px) {
     min-width: 100%;
   }
 }
@@ -117,24 +117,24 @@ body {
   position: fixed;
   top: 0;
   left: 0%;
-  width: 50%;
+  max-width: 50%;
   height: 100vh;
+
   // background-color: #fff;
   // border-right: 1px solid rgb(255, 251, 251);
   // transition: all 0.5s;
   z-index: 8000;
   opacity: 1;
   visibility: visible;
-  height: 100vh;
-  @media only screen and (max-width: 550px) {
-    width: 100%;
-  }
+  // @media only screen and (max-width: 550px) {
+  //    max-width:100%;
+  // }
 }
 
 .nav-menu-container {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 4rem 2rem;
   background-color: var(--lightBgGrey);
   &-icon {
@@ -151,7 +151,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
+  // gap: 3rem;
   padding: 1rem;
 }
 .nav-menu-container-wrapper-icon {
@@ -161,6 +161,7 @@ body {
 }
 .nav-menu-container-wrapper-link {
   list-style: none;
+  margin-left: 2rem;
 }
 .nav-menu-container-wrapper-links {
   text-decoration: none;
@@ -205,17 +206,26 @@ body {
   left: 0;
   right: 0;
 
-  display: flex;
+
   padding: 2rem;
   gap: 1rem;
+    display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-content: center;
   a {
     list-style: none;
     width: 100%;
   }
+  @media only screen and (min-width: 550px) {
+    .btn-login-menu,
+    .btn-login-menu1 {
+        width: 25rem;
+    }
+  }
 }
+
 .cart-btn1 {
   display: flex;
 }
@@ -1004,6 +1014,9 @@ header {
   grid-template-rows: repeat(8, 1fr);
   grid-gap: 1.5rem;
   padding: 1.5rem;
+   @media only screen and (max-width: 768px){
+  min-height: 50vh;
+   }
 }
 
 .service-1 {
@@ -2896,6 +2909,15 @@ sliderHouse::-webkit-scrollbar-thumb {
   letter-spacing: 1px;
 }
 
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.139);
+  z-index: -1
+}
 .form__photo-upload {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4452,10 +4474,10 @@ ul li a {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-   font-weight: 400;
+  font-weight: 400;
   font-size: 14px;
   color: #081826;
-  gap: .5rem;
+  gap: 0.5rem;
   padding: 2rem 0;
 }
 .changedFrom {

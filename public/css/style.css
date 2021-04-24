@@ -97,7 +97,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 450px) {
+@media only screen and (max-width: 450px) {
   .nav-menu {
     min-width: 100%;
   }
@@ -141,24 +141,17 @@ body {
   position: fixed;
   top: 0;
   left: 0%;
-  width: 50%;
+  max-width: 50%;
   height: 100vh;
   z-index: 8000;
   opacity: 1;
   visibility: visible;
-  height: 100vh;
-}
-
-@media only screen and (max-width: 550px) {
-  .nav-menu-active {
-    width: 100%;
-  }
 }
 
 .nav-menu-container {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 4rem 2rem;
   background-color: var(--lightBgGrey);
 }
@@ -183,7 +176,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2rem;
   padding: 1rem;
 }
 
@@ -195,6 +187,7 @@ body {
 
 .nav-menu-container-wrapper-link {
   list-style: none;
+  margin-left: 2rem;
 }
 
 .nav-menu-container-wrapper-links {
@@ -241,11 +234,11 @@ body {
   bottom: 2rem;
   left: 0;
   right: 0;
+  padding: 2rem;
+  gap: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 2rem;
-  gap: 1rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -256,11 +249,20 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .nav-menu-container-btn a {
   list-style: none;
   width: 100%;
+}
+
+@media only screen and (min-width: 550px) {
+  .nav-menu-container-btn .btn-login-menu,
+  .nav-menu-container-btn .btn-login-menu1 {
+    width: 25rem;
+  }
 }
 
 .cart-btn1 {
@@ -1291,6 +1293,12 @@ header {
       grid-template-rows: repeat(8, 1fr);
   grid-gap: 1.5rem;
   padding: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .services {
+    min-height: 50vh;
+  }
 }
 
 .service-1 {
@@ -3912,6 +3920,16 @@ sliderHouse::-webkit-scrollbar-thumb {
   letter-spacing: 1px;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.139);
+  z-index: -1;
+}
+
 .form__photo-upload {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6053,7 +6071,7 @@ ul li a {
   font-weight: 400;
   font-size: 14px;
   color: #081826;
-  gap: .5rem;
+  gap: 0.5rem;
   padding: 2rem 0;
 }
 
