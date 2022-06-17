@@ -1,4 +1,3 @@
 # Nexerty Application
 
-
-Built using  modern technologies : Node.js, express, MongDB, mangoose
+Built using modern technologies : Node.js, express, MongDB, Mangoose
