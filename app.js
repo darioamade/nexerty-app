@@ -18,6 +18,7 @@ const bookingRouter = require('./routes/bookingRoutes');
 const menRouter = require('./routes/menRouters');
 const viewRouter = require('./routes/viewRoutes');
 
+// app express
 const app = express();
 
 app.enable('trust proxy');
