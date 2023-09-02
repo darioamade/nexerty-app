@@ -112,3 +112,17 @@ https://stackoverflow.com/questions/66190532/deprecationwarning-listening-to-eve
 TEMP Fix. you must remove current mongoose version 
 (I was on 5.11.13), and downgrade to mongoose@5.11.15, to resolve it.
 */
+
+
+
+/******
+ git config --global user.name "Dario Amade"
+git config --global user.email "dario_isd@outlook.com"
+
+
+ * 
+ * 
+ * 
+ * 
+ * 
+ * ****/
